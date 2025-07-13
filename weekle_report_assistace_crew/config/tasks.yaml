@@ -1,0 +1,37 @@
+research_task:
+  description: >
+    Conduct a thorough research for user {username}.
+    Make sure to include the most relevant and accurate information 
+    during the period from {start_date} to {end_date}.
+    Use the Jira and Github tools provided.
+  expected_output: >
+    A list of github pull requests and jira issues with the most relevant information
+    for user {username} between {start_date} and {end_date}.
+    Each item should contain the following information:
+    - Title
+    - Description
+    - Status
+    - Date
+    - Author
+    - Link
+  agent: researcher
+
+reporting_task_creation:
+  description: >
+    Create a comprehensive report that summarizes the findings of the data
+    research and provides a detailed report about the user tasks.
+  expected_output: >
+    A report that summarizes the findings of the data research and provides a
+    detailed report about the user tasks.
+  agent: reporting_creator
+
+reporting_task_review:
+  description: >
+    Review the report created by the reporting creator and provide feedback
+    to ensure that it meets the highest standards of quality and accuracy.
+  expected_output: >
+    A report that summarizes the findings of the data research and provides a
+    detailed report about the user tasks.
+  output_file: >
+    report.md
+  agent: reporting_reviewer

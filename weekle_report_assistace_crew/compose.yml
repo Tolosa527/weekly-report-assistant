@@ -1,0 +1,9 @@
+version: '3.9'
+services:
+  crewai:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000" # Map host port 8000 to container port 8000
+    working_dir: /app
